@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    user-select: none;
+    color: white;
+}
+
+body {
+    background-image: linear-gradient(rgba(9,0,77,0.65),rgba(9,0,77,0.65)),url(back.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.games-container {
+    display: flex;
+    gap: 100px;
+    align-items: center;
+
+}
+
+.game {
+    background: #252A34;
+    padding: 20px;
+    border-radius: 12px;
+    width: 300px;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#header {
+    display: flex;
+    width: 235px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+#header .player {
+    background: #17122A;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 12px;
+    border: solid 4px #17122A;
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+#header .player:hover {
+    border: solid 4px #2A2343;
+}
+
+#header .player-active {
+    opacity: 1;
+    border: solid 4px #2A2343;
+}
+
+#header #xPlayerDisplay {
+    color: #1892EA;
+}
+
+#header #oPlayerDisplay {
+    color: #A737FF;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(3, 70px);
+    grid-template-rows: repeat(3, 70px);
+    gap: 12px;
+}
+
+#board .cell {
+    background: #17122A;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s background;
+}
+
+#board .cell:hover {
+    background: #2A2343;
+}
+
+#restartBtn {
+    margin-top: 30px;
+    width: 235px;
+    background: #17122A;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s background;
+    visibility: hidden;
+}
+
+#restartBtn:hover {
+    background: #2A2343;
+}
+
+/* Person vs Person Game Styles */
+.turn-on-container {
+    display: flex;
+    justify-content: space-between;
+    width: 235px;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+.turn-on-container h3 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.turn-box {
+    background: #17122A;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 12px;
+    border: solid 4px #17122A;
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+.turn-box:hover {
+    border: solid 4px #2A2343;
+}
+
+.turn-box.align {
+    opacity: 1;
+    border: solid 4px #2A2343;
+}
+
+.main-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 70px);
+    grid-template-rows: repeat(3, 70px);
+    gap: 12px;
+}
+#head {
+    display: flex;
+    width: 235px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+#head .player {
+    background: #17122A;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 12px;
+    border: solid 4px #17122A;
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+#head .player:hover {
+    border: solid 4px #2A2343;
+}
+
+#head .player-active {
+    opacity: 1;
+    border: solid 4px #2A2343;
+}
+
+#head #xPlayerDisplay {
+    color: #1892EA;
+}
+
+#head #oPlayerDisplay {
+    color: #A737FF;
+}
+
+.box {
+    background: #17122A;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s background;
+}
+
+.box:hover {
+    background: #2A2343;
+}
+
+#play-again {
+    margin-top: 30px;
+    width: 235px;
+    background: #17122A;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s background;
+    visibility: hidden;
+}
+
+#play-again:hover {
+    background: #2A2343;
+}
+
+#result {
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 20px;
+    color: #A737FF;
+}
+#turn-indicator {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.player-button {
+    background-color: #444;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.player-button.player-active {
+    background-color: #00bcd4; /* Active color for the current player */
+    color: #000; /* Color when active */
+}
+
+.player-button.player-inactive {
+    background-color: #888; /* Inactive color for the other player */
+    color: #fff;
+}

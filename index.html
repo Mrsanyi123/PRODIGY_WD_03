@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TicTacToe Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="games-container">
+        <!-- Person vs Computer Game -->
+        <div class="game">
+            <h2  style="text-align: center; color: #ffffff ; ">Person Vs Computer</h2>
+            <main>
+                <header id="header">
+                    <div class="player player-active" id="xPlayerDisplay" onclick="choosePlayer('X')"> X
+                    </div>
+                    <h3 id="titleHeader">Choose</h3>
+                    <div class="player" id="oPlayerDisplay" onclick="choosePlayer('O')"> O
+                    </div>
+                </header>
+
+                <div id="board">
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                </div>
+
+                <button id="restartBtn">Restart</button>
+            </main>
+        </div>
+
+        <!-- Person vs Person Game -->
+        <div class="game">
+            <h2 style="text-align: center; color: #ffffff ;">Person Vs Person</h2>
+            <header id="head">
+                <div class="player player-active" id="xPlayerDisplay" > X
+                </div>
+                <h3 id="titleHeader">Go Head!</h3>
+                <div class="player" id="oPlayerDisplay"> O
+                </div>
+            </header>
+            <div class="main-grid">
+                <div class="box align">0</div>
+                <div class="box align">1</div>
+                <div class="box align">2</div>
+                <div class="box align">3</div>
+                <div class="box align">4</div>
+                <div class="box align">5</div>
+                <div class="box align">6</div>
+                <div class="box align">7</div>
+                <div class="box align">8</div>
+            </div>
+            <h2 id="result"></h2>
+            <button id="play-again">Play Again</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
